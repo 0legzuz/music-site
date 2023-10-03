@@ -12,6 +12,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "format": "prettier --write .",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "prepare": "husky install",
+    "lint": "npm run lint:css && npm run lint:js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,6 +45,13 @@
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
-    "prettier": "3.0.3"
+    "husky": "^8.0.3",
+    "prettier": "3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^4.0.2",
+    "stylelint-selector-bem-pattern": "^3.0.1"
   }
 }

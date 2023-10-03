@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "selector-class-pattern": "^[_a-zA-Z]+[_a-zA-Z0-9-]*(__[_a-zA-Z0-9-]+)?(_[_a-zA-Z0-9-]+)?$",
+    "prettier/prettier": true,
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["Stratos"]
+      }
+    ]
+  }
+}
