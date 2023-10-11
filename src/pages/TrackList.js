@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import * as S from '../styles/TrackList';
 
 export default function TrackList() {
+  const [showAuthor, setShowAuthor] = useState(false);
+  const [showYear, setShowYear] = useState(false);
+  const [showGenre, setShowGenre] = useState(false);
+
+  const toggleAuthor = () => {
+    setShowAuthor(!showAuthor);
+    setShowYear(false);
+    setShowGenre(false);
+  };
+
+  const toggleYear = () => {
+    setShowYear(!showYear);
+    setShowAuthor(false);
+    setShowGenre(false);
+  };
+
+  const toggleGenre = () => {
+    setShowGenre(!showGenre);
+    setShowAuthor(false);
+    setShowYear(false);
+  };
+
   return (
-    <div className="main__centerblock centerblock">
-      <div className="centerblock__search search">
+    <S.MainCenterblock>
+      <S.CenterblockSearch>
         <svg className="search__svg">
           <use xlinkHref="img/icon/sprite.svg#icon-search"></use>
         </svg>
@@ -13,16 +36,72 @@ export default function TrackList() {
           placeholder="Поиск"
           name="search"
         />
-      </div>
-      <h2 className="centerblock__h2">Треки</h2>
-      <div className="centerblock__filter filter">
+      </S.CenterblockSearch>
+
+      <S.CenterblockH2>Треки</S.CenterblockH2>
+      <S.CenterblockFilter>
         <div className="filter__title">Искать по:</div>
-        <div className="filter__button button-author _btn-text">
+
+        <div
+          className="filter__button button-author _btn-text"
+          onClick={toggleAuthor}
+        >
           исполнителю
         </div>
-        <div className="filter__button button-year _btn-text">году выпуска</div>
-        <div className="filter__button button-genre _btn-text">жанру</div>
-      </div>
+        {showAuthor && (
+          <div className="author-filter">
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+          </div>
+        )}
+
+        <div
+          className="filter__button button-year _btn-text"
+          onClick={toggleYear}
+        >
+          году выпуска
+        </div>
+        {showYear && (
+          <div className="year-filter">
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+          </div>
+        )}
+
+        <div
+          className="filter__button button-genre _btn-text"
+          onClick={toggleGenre}
+        >
+          жанру
+        </div>
+        {showGenre && (
+          <div className="genre-filter">
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+            <div className="filter-dropdown">1</div>
+          </div>
+        )}
+      </S.CenterblockFilter>
       <div className="centerblock__content">
         <div className="content__title playlist-title">
           <div className="playlist-title__col col01">Трек</div>
@@ -68,6 +147,102 @@ export default function TrackList() {
             </div>
           </div>
 
+          <div className="playlist__item">
+            <div className="playlist__track track">
+              <div className="track__title">
+                <div className="track__title-image">
+                  <svg className="track__title-svg" alt="music">
+                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                  </svg>
+                </div>
+                <div className="track__title-text">
+                  <a className="track__title-link" href="http://">
+                    Elektro <span className="track__title-span"></span>
+                  </a>
+                </div>
+              </div>
+              <div className="track__author">
+                <a className="track__author-link" href="http://">
+                  Dynoro, Outwork, Mr. Gee
+                </a>
+              </div>
+              <div className="track__album">
+                <a className="track__album-link" href="http://">
+                  Elektro
+                </a>
+              </div>
+              <div className="track__time">
+                <svg className="track__time-svg" alt="time">
+                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                </svg>
+                <span className="track__time-text">2:22</span>
+              </div>
+            </div>
+          </div>
+          <div className="playlist__item">
+            <div className="playlist__track track">
+              <div className="track__title">
+                <div className="track__title-image">
+                  <svg className="track__title-svg" alt="music">
+                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                  </svg>
+                </div>
+                <div className="track__title-text">
+                  <a className="track__title-link" href="http://">
+                    Elektro <span className="track__title-span"></span>
+                  </a>
+                </div>
+              </div>
+              <div className="track__author">
+                <a className="track__author-link" href="http://">
+                  Dynoro, Outwork, Mr. Gee
+                </a>
+              </div>
+              <div className="track__album">
+                <a className="track__album-link" href="http://">
+                  Elektro
+                </a>
+              </div>
+              <div className="track__time">
+                <svg className="track__time-svg" alt="time">
+                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                </svg>
+                <span className="track__time-text">2:22</span>
+              </div>
+            </div>
+          </div>
+          <div className="playlist__item">
+            <div className="playlist__track track">
+              <div className="track__title">
+                <div className="track__title-image">
+                  <svg className="track__title-svg" alt="music">
+                    <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                  </svg>
+                </div>
+                <div className="track__title-text">
+                  <a className="track__title-link" href="http://">
+                    Elektro <span className="track__title-span"></span>
+                  </a>
+                </div>
+              </div>
+              <div className="track__author">
+                <a className="track__author-link" href="http://">
+                  Dynoro, Outwork, Mr. Gee
+                </a>
+              </div>
+              <div className="track__album">
+                <a className="track__album-link" href="http://">
+                  Elektro
+                </a>
+              </div>
+              <div className="track__time">
+                <svg className="track__time-svg" alt="time">
+                  <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                </svg>
+                <span className="track__time-text">2:22</span>
+              </div>
+            </div>
+          </div>
           <div className="playlist__item">
             <div className="playlist__track track">
               <div className="track__title">
@@ -602,6 +777,6 @@ export default function TrackList() {
           </div>
         </div>
       </div>
-    </div>
+    </S.MainCenterblock>
   );
 }

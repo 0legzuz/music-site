@@ -1,4 +1,12 @@
-.sidebar__personal {
+import styled from 'styled-components';
+
+
+export const MainSidebar = styled.div`
+  max-width: 418px;
+  padding: 20px 150px 20px 20px;
+`
+
+export const SidebarPersonal = styled.div`
   align-items: center;
   -webkit-box-align: center;
   -webkit-box-direction: normal;
@@ -12,26 +20,23 @@
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 12px 0 15px;
-}
+`
 
-.sidebar__personal-name {
+export const SidebarPersonalName = styled.p`
   color: #fff;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin-right: 16px;
-}
+`
 
-.sidebar__icon {
-  background-color: #313131;
-  border-radius: 50%;
+export const SidebarIcon = styled.div`
   cursor: pointer;
   height: 43px;
   width: 43px;
-}
-
-.sidebar__block {
+`
+export const SidebarBlock = styled.div`
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
   -webkit-box-pack: start;
@@ -42,10 +47,10 @@
   -ms-flex-pack: start;
   height: 100%;
   justify-content: flex-start;
-  padding: 240px 0 0;
-}
+  padding: 150px 0 0;
+`
 
-.sidebar__list {
+export const SidebarList = styled.div`
   align-items: center;
   -webkit-box-align: center;
   -webkit-box-direction: normal;
@@ -55,23 +60,23 @@
   display: flex;
   -ms-flex-align: center;
   flex-direction: column;
-}
+`
 
-.sidebar__item {
+export const SidebarItem = styled.div`
   height: 150px;
-  width: 250px;
-}
+  width: 210px;
 
-.sidebar__item:not(:last-child) {
-  margin-bottom: 30px;
-}
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+`;
 
-.sidebar__link {
+export const  SidebarLink = styled.a `
   height: 100%;
   width: 100%;
-}
+`;
 
-.sidebar__img {
+export const SidebarImg = styled.img`
   height: auto;
   width: 100%;
-}
+`;
