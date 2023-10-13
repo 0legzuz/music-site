@@ -1,24 +1,46 @@
-.centerblock__filter {
+import styled from 'styled-components';
+
+export const MainCenterblock = styled.div`
+  width: auto;
+  padding: 20px 20px 20px 20px;
+`;
+export const CenterblockSearch = styled.div`
+  width: 100%;
+  border-bottom: 1px solid #4e4e4e;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const CenterblockH2 = styled.h2`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 65px;
+  letter-spacing: -0.8px;
+  margin-bottom: 25px;
+`;
+export const CenterblockFilter = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 25px;
-}
+`;
 
-.centerblock__content {
+export const CenterblockContent = styled.div`
   display: flex;
   flex-direction: column;
-}
+`;
 
-.search__svg {
+export const SearchSvg = styled.svg`
   width: 17px;
   height: 17px;
   margin-right: 5px;
   stroke: #fff;
   fill: transparent;
-}
-
-.search__text {
+`;
+export const SearchText = styled.input`
   flex-grow: 100;
   background-color: transparent;
   border: none;
@@ -28,26 +50,38 @@
   font-size: 14px;
   line-height: 22px;
   color: #fff;
-}
+  &::placeholder {
+    background-color: transparent;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+`;
 
-.search__text::placeholder {
-  background-color: transparent;
-  color: #fff;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.filter__title {
+export const FilterTitle = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   margin-right: 15px;
-}
+`;
 
-.author-filter {
+export const FilterButton = styled.div`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  border: 1px solid #fff;
+  border-radius: 60px;
+  padding: 4px 15px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+`;
+
+export const AuthorFilter = styled.div`
   position: absolute;
   width: 200px;
   height: 257px;
@@ -65,24 +99,20 @@
   border-width: 24px;
   border-color: #313131;
   border-style: solid;
-}
-
-.author-filter::-webkit-scrollbar {
-  width: 4px;
-}
-
-.author-filter::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  height: 65px;
-  border-radius: 10px;
-}
-
-.author-filter::-webkit-scrollbar-track {
-  background-color: #4b4949;
-  border-radius: 10px;
-}
-
-.year-filter {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    height: 65px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #4b4949;
+    border-radius: 10px;
+  }
+`;
+export const YearFilter = styled.div`
   position: absolute;
   width: 200px;
   height: 257px;
@@ -100,24 +130,20 @@
   border-width: 24px;
   border-color: #313131;
   border-style: solid;
-}
-
-.year-filter::-webkit-scrollbar {
-  width: 4px;
-}
-
-.year-filter::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  height: 65px;
-  border-radius: 10px;
-}
-
-.year-filter::-webkit-scrollbar-track {
-  background-color: #4b4949;
-  border-radius: 10px;
-}
-
-.genre-filter {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    height: 65px;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #4b4949;
+    border-radius: 10px;
+  }
+`;
+export const GenreFilter = styled.div`
   position: absolute;
   width: 200px;
   height: 257px;
@@ -135,43 +161,29 @@
   border-width: 24px;
   border-color: #313131;
   border-style: solid;
-}
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
 
-.genre-filter::-webkit-scrollbar {
-  width: 4px;
-}
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    height: 65px;
+    border-radius: 10px;
+  }
 
-.genre-filter::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  height: 65px;
-  border-radius: 10px;
-}
+  &::-webkit-scrollbar-track {
+    background-color: #4b4949;
+    border-radius: 10px;
+  }
+`;
+export const FilterDropdown = styled.div`
+  &:hover {
+    color: #b672ff;
+    cursor: pointer;
+  }
+`;
 
-.genre-filter::-webkit-scrollbar-track {
-  background-color: #4b4949;
-  border-radius: 10px;
-}
-
-.filter-dropdown:hover {
-  color: #b672ff;
-  cursor: pointer;
-}
-
-.filter__button {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  border: 1px solid #fff;
-  border-radius: 60px;
-  padding: 4px 15px;
-}
-
-.filter__button:not(:last-child) {
-  margin-right: 10px;
-}
-
-.content__title {
+export const ContentTitle = styled.div`
   display: -webkit-box;
   display: flexbox;
   display: flex;
@@ -185,33 +197,32 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 15px;
-}
+`;
 
-.content__playlist {
+export const ContentPlaylist = styled.div`
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
   height: 800px;
   overflow-y: scroll;
-}
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
 
-.content__playlist::-webkit-scrollbar {
-  width: 4px;
-}
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+  }
 
-.content__playlist::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 10px;
-}
+  &::-webkit-scrollbar-track {
+    background-color: #4b4949;
+    border-radius: 10px;
+    height: 20px;
+  }
+`;
 
-.content__playlist::-webkit-scrollbar-track {
-  background-color: #4b4949;
-  border-radius: 10px;
-  height: 20px;
-}
-
-.playlist-title__col {
+export const PlaylistTitleCol = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -219,47 +230,40 @@
   letter-spacing: 2px;
   color: #696969;
   text-transform: uppercase;
-}
+`;
+export const PlaylistTitleColTrack = styled(PlaylistTitleCol)`
+  max-width: 400px;
+`;
+export const PlaylistTitleColAuthor = styled(PlaylistTitleCol)`
+  max-width: 300px;
+`;
+export const PlaylistTitleColAlbum = styled(PlaylistTitleCol)`
+  max-width: 180px;
+`;
+export const PlaylistTitleColTimeLike = styled(PlaylistTitleCol)`
+  width: 60px;
+  text-align: end;
+`;
 
-.playlist-title__svg {
+export const PlaylistTitleSvg = styled.svg`
   width: 12px;
   height: 12px;
   fill: transparent;
   stroke: #696969;
-}
-
-.col01 {
-  max-width: 400px;
-}
-
-.col02 {
-  max-width: 300px;
-}
-
-.col03 {
-  width: 180px;
-}
-
-.col04 {
-  width: 60px;
-  text-align: end;
-}
-
-.playlist__item {
+`;
+export const PlaylistItem = styled.div`
   width: 100%;
   display: block;
   margin-bottom: 12px;
   padding-right: 12px;
-}
-
-.playlist__track {
+`;
+export const PlaylistTrack = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.track__title {
+`;
+export const TrackTitle = styled.div`
   display: -webkit-box;
   display: flexbox;
   display: flex;
@@ -270,43 +274,39 @@
   -ms-flex-align: center;
   align-items: center;
   width: 400px;
-}
-
-.track__title-image {
+`;
+export const TrackTitleImage = styled.div`
   width: 40px;
   height: 40px;
   padding: 12px;
-  background: #313131;
+  background-color: #313131;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 17px;
-}
-
-.track__title-svg {
+`;
+export const TrackTitleSvg = styled.svg`
   width: 18px;
   height: 17px;
   fill: transparent;
   stroke: #4e4e4e;
-}
-
-.track__title-link {
+`;
+export const TrackTitleLink = styled.a`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #fff;
-}
-
-.track__title-span {
+`;
+export const TrackTitleSpan = styled.span`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #4e4e4e;
-}
+`;
 
-.track__author {
+export const TrackAuthor = styled.div`
   width: 300px;
   display: -webkit-box;
   display: flexbox;
@@ -314,49 +314,49 @@
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
+`;
 
-.track__author-link {
+export const TrackAuthorLink = styled.a`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #fff;
   text-align: left;
-}
+`;
 
-.track__album {
+export const TrackAlbum = styled.div`
   width: 180px;
-}
+`;
 
-.track__album-link {
+export const TrackAlbumLink = styled.a`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #696969;
-}
+`;
 
-.track__time {
+export const TrackTime = styled.div`
   display: flex;
   flex-wrap: nowrap;
   margin-right: 20px;
-}
+`;
 
-.track__time-svg {
+export const TrackTimeSvg = styled.svg`
   width: 12px;
   height: 12px;
   margin-right: 14px;
   margin-top: 3px;
   fill: transparent;
   stroke: #696969;
-}
+`;
 
-.track__time-text {
+export const TrackTimeText = styled.span`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   text-align: right;
   color: #696969;
-}
+`;

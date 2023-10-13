@@ -1,340 +1,221 @@
 import React from 'react';
+const UserIcon = '/img/logo.svg';
+import * as TrackList from '../styles/TrackListStyles';
+import * as NavMenu from '../styles/NavMenuStyles';
+import * as SideBar from '../styles/SideBarStyles';
+import * as SkeletonModule from '../styles/SkeletonStyles';
+import * as AudioPlayer from '../styles/AudioPlayerStyles';
+import * as AppStyles from '../styles/AppStyles.js';
+
+const S = {
+  ...TrackList,
+  ...NavMenu,
+  ...SideBar,
+  ...SkeletonModule,
+  ...AudioPlayer,
+  ...AppStyles
+};
 
 export default function Skeleton() {
   return (
-    <div className="wrapper">
-      <div className="container">
-        <main className="main">
-          <nav className="main__nav nav">
-            <div className="nav__logo logo">
-              <img className="logo__image" src="img/logo.png" alt="logo" />
-            </div>
-            <div className="nav__burger burger">
-              <span className="burger__line"></span>
-              <span className="burger__line"></span>
-              <span className="burger__line"></span>
-            </div>
-            <div className="nav__menu menu">
-              <ul className="menu__list">
-                <li className="menu__item">
-                  <a href="#" className="menu__link">
+    <S.Wrapper>
+      <S.Container>
+        <S.Main>
+          <S.MainNav>
+            <S.NavLogo>
+              <S.LogoImage src="img/logo.svg" alt="logo" />
+            </S.NavLogo>
+            <S.NavBurger>
+              <S.BurgerLine></S.BurgerLine>
+              <S.BurgerLine></S.BurgerLine>
+              <S.BurgerLine></S.BurgerLine>
+            </S.NavBurger>
+            <S.NavMenu>
+              <S.MenuList>
+                <S.MenuItem>
+                  <S.MenuLink href="#" className="menu__link">
                     Главное
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="#" className="menu__link">
+                  </S.MenuLink>
+                </S.MenuItem>
+                <S.MenuItem>
+                  <S.MenuLink href="#" className="menu__link">
                     Мой плейлист
-                  </a>
-                </li>
-                <li className="menu__item">
-                  <a href="../signin.html" className="menu__link">
-                    Войти
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <div className="main__centerblock centerblock">
-            <div className="centerblock__search search">
-              <svg className="search__svg">
+                  </S.MenuLink>
+                </S.MenuItem>
+                <S.MenuItem>
+                  <S.MenuLink href="#">Войти</S.MenuLink>
+                </S.MenuItem>
+              </S.MenuList>
+            </S.NavMenu>
+          </S.MainNav>
+          <S.MainCenterblock>
+            <S.CenterblockSearch>
+              <S.SearchSvg>
                 <use xlinkHref="img/icon/sprite.svg#icon-search"></use>
-              </svg>
-              <input
-                className="search__text"
-                type="search"
-                placeholder="Поиск"
-                name="search"
-              />
-            </div>
-            <h2 className="centerblock__h2">Треки</h2>
-            <div className="centerblock__filter filter">
-              <div className="filter__title">Искать по:</div>
-              <div className="filter__button button-author _btn-text">
+              </S.SearchSvg>
+              <S.SearchText type="search" placeholder="Поиск" name="search" />
+            </S.CenterblockSearch>
+
+            <S.CenterblockH2>Треки</S.CenterblockH2>
+            <S.CenterblockFilter>
+              <S.FilterTitle>Искать по:</S.FilterTitle>
+
+              <S.FilterButton className="button-author _btn-text">
                 исполнителю
-              </div>
-              <div className="filter__button button-year _btn-text">
+              </S.FilterButton>
+
+              <S.FilterButton className="button-year _btn-text">
                 году выпуска
-              </div>
-              <div className="filter__button button-genre _btn-text">жанру</div>
-            </div>
-            <div className="centerblock__content">
-              <div className="content__title playlist-title">
-                <div className="playlist-title__col col01">Трек</div>
-                <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-                <div className="playlist-title__col col03">АЛЬБОМ</div>
-                <div className="playlist-title__col col04">
-                  <svg className="playlist-title__svg" alt="time">
+              </S.FilterButton>
+
+              <S.FilterButton className="filter__button button-genre _btn-text">
+                жанру
+              </S.FilterButton>
+            </S.CenterblockFilter>
+            <S.CenterblockContent>
+              <S.ContentTitle className="playlist-title">
+                <S.PlaylistTitleColTrack>ТРЕК</S.PlaylistTitleColTrack>
+                <S.PlaylistTitleColAuthor>ИСПОЛНИТЕЛЬ</S.PlaylistTitleColAuthor>
+                <S.PlaylistTitleColAlbum>АЛЬБОМ</S.PlaylistTitleColAlbum>
+                <S.PlaylistTitleColTimeLike>
+                  <S.PlaylistTitleSvg alt="time">
                     <use xlinkHref="img/icon/sprite.svg#icon-watch"></use>
-                  </svg>
-                </div>
-              </div>
-              <div className="content__playlist playlist">
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-                <div className="playlist__item">
-                  <div className="playlist__track_skeleton track">
-                    <div className="track__title">
-                      <div className="track__title-image_skeleton"></div>
-                      <div className="track__title-text_skeleton"></div>
-                    </div>
-                    <div className="track__author_skeleton"></div>
-                    <div className="track__album_skeleton"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="main__sidebar sidebar">
-            <div className="sidebar__personal">
-              <p className="sidebar__personal-name"></p>
-              <div className="sidebar__icon">
-                <svg alt="logout">
-                  <use xlinkHref="img/icon/sprite.svg#logout"></use>
-                </svg>
-              </div>
-            </div>
-            <div className="sidebar__block">
-              <div className="sidebar__list">
-                <div className="sidebar__item_skeleton"></div>
-                <div className="sidebar__item_skeleton"></div>
-                <div className="sidebar__item_skeleton"></div>
-              </div>
-            </div>
-          </div>
-        </main>
-        <div className="bar">
-          <div className="bar__content">
-            <div className="bar__player-progress"></div>
-            <div className="bar__player-block">
-              <div className="bar__player player">
-                <div className="player__controls">
-                  <div className="player__btn-prev">
-                    <svg className="player__btn-prev-svg" alt="prev">
-                      <use xlinkHref="img/icon/sprite.svg#icon-prev"></use>
-                    </svg>
-                  </div>
-                  <div className="player__btn-play _btn">
-                    <svg className="player__btn-play-svg" alt="play">
-                      <use xlinkHref="img/icon/sprite.svg#icon-play"></use>
-                    </svg>
-                  </div>
-                  <div className="player__btn-next">
-                    <svg className="player__btn-next-svg" alt="next">
-                      <use xlinkHref="img/icon/sprite.svg#icon-next"></use>
-                    </svg>
-                  </div>
-                  <div className="player__btn-repeat _btn-icon">
-                    <svg className="player__btn-repeat-svg" alt="repeat">
-                      <use xlinkHref="img/icon/sprite.svg#icon-repeat"></use>
-                    </svg>
-                  </div>
-                  <div className="player__btn-shuffle _btn-icon">
-                    <svg className="player__btn-shuffle-svg" alt="shuffle">
-                      <use xlinkHref="img/icon/sprite.svg#icon-shuffle"></use>
-                    </svg>
-                  </div>
-                </div>
-
-                <div className="player__track-play track-play">
-                  <div className="track-play__contain">
-                    <div className="track-play__image"></div>
-                    <div className="track-play__author_skeleton"></div>
-                    <div className="track-play__album_skeleton"></div>
-                  </div>
-
-                  <div className="track-play__like-dis">
-                    <div className="track-play__like _btn-icon">
-                      <svg className="track-play__like-svg" alt="like">
+                  </S.PlaylistTitleSvg>
+                </S.PlaylistTitleColTimeLike>
+              </S.ContentTitle>
+              <S.ContentPlaylist className="playlist">
+                <S.PlaylistItem>
+                  <S.PlaylistTrack className="track">
+                    <S.TrackTitle>
+                      <S.TrackTitleImage>
+                        <S.TrackTitleSvg alt="music">
+                          <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                        </S.TrackTitleSvg>
+                      </S.TrackTitleImage>
+                      <div className="track__title-text">
+                        <S.TrackTitleLinkSkeleton href="http://">
+                          <S.TrackTitleSpan></S.TrackTitleSpan>
+                        </S.TrackTitleLinkSkeleton>
+                      </div>
+                    </S.TrackTitle>
+                    <S.TrackAuthor>
+                      <S.TrackAuthorLinkSkeleton href="http://"></S.TrackAuthorLinkSkeleton>
+                    </S.TrackAuthor>
+                    <S.TrackAlbum>
+                      <S.TrackAlbumLinkSkeleton href="http://"></S.TrackAlbumLinkSkeleton>
+                    </S.TrackAlbum>
+                    <S.TrackTime>
+                      <S.TrackTimeSvg alt="time">
                         <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
-                      </svg>
-                    </div>
-                    <div className="track-play__dislike _btn-icon">
-                      <svg className="track-play__dislike-svg" alt="dislike">
+                      </S.TrackTimeSvg>
+                      <S.TrackTimeText>4:44</S.TrackTimeText>
+                    </S.TrackTime>
+                  </S.PlaylistTrack>
+                </S.PlaylistItem>
+              </S.ContentPlaylist>
+            </S.CenterblockContent>
+          </S.MainCenterblock>
+          <S.MainSidebar>
+            <S.SidebarPersonal>
+              <S.SidebarPersonalName>0legzuz</S.SidebarPersonalName>
+              <S.SidebarIcon>
+                <img src={UserIcon} alt="User Icon" />
+              </S.SidebarIcon>
+            </S.SidebarPersonal>
+            <S.SidebarBlock>
+              <S.SidebarList>
+                <S.SidebarItemSkeleton>
+                  <S.SidebarLink href="#"></S.SidebarLink>
+                </S.SidebarItemSkeleton>
+                <S.SidebarItemSkeleton>
+                  <S.SidebarLink href="#"></S.SidebarLink>
+                </S.SidebarItemSkeleton>
+                <S.SidebarItemSkeleton>
+                  <S.SidebarLink href="#"></S.SidebarLink>
+                </S.SidebarItemSkeleton>
+              </S.SidebarList>
+            </S.SidebarBlock>
+          </S.MainSidebar>
+        </S.Main>
+        <S.Bar>
+          <S.BarContent>
+            <S.BarPlayerProgress></S.BarPlayerProgress>
+            <S.BarPlayerBlock>
+              <S.BarPlayer>
+                <S.PlayerControls>
+                  <S.PlayerBtnPrev>
+                    <S.PlayerBtnPrevSvg className="_btn" alt="prev">
+                      <use xlinkHref="img/icon/sprite.svg#icon-prev"></use>
+                    </S.PlayerBtnPrevSvg>
+                  </S.PlayerBtnPrev>
+                  <S.PlayerBtnPlay className="_btn">
+                    <S.PlayerBtnPlaySvg alt="play">
+                      <use xlinkHref="img/icon/sprite.svg#icon-play"></use>
+                    </S.PlayerBtnPlaySvg>
+                  </S.PlayerBtnPlay>
+                  <S.PlayerBtnNext className="_btn">
+                    <S.PlayerBtnNextSvg alt="next">
+                      <use xlinkHref="img/icon/sprite.svg#icon-next"></use>
+                    </S.PlayerBtnNextSvg>
+                  </S.PlayerBtnNext>
+                  <S.PlayerBtnRepeat className="_btn">
+                    <S.PlayerBtnPrevSvg alt="repeat">
+                      <use xlinkHref="img/icon/sprite.svg#icon-repeat"></use>
+                    </S.PlayerBtnPrevSvg>
+                  </S.PlayerBtnRepeat>
+                  <S.PlayerBtnShuffle className="_btn">
+                    <S.PlayerBtnShuffleSvg alt="shuffle">
+                      <use xlinkHref="img/icon/sprite.svg#icon-shuffle"></use>
+                    </S.PlayerBtnShuffleSvg>
+                  </S.PlayerBtnShuffle>
+                </S.PlayerControls>
+
+                <S.PlayerTrackPlay>
+                  <S.TrackPlayContain>
+                    <S.TrackPlayImage>
+                      <S.TrackPlaySvg alt="music">
+                        <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
+                      </S.TrackPlaySvg>
+                    </S.TrackPlayImage>
+                    <S.TrackPlayAuthorSkeleton></S.TrackPlayAuthorSkeleton>
+                    <S.TrackPlayAlbumSkeleton></S.TrackPlayAlbumSkeleton>
+                  </S.TrackPlayContain>
+
+                  <S.TrackPlayLikeDis>
+                    <S.TrackPlayLike className="_btn-icon">
+                      <S.TrackPlayLikeSvg alt="like">
+                        <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+                      </S.TrackPlayLikeSvg>
+                    </S.TrackPlayLike>
+                    <S.TrackPlayDislike className="_btn-icon">
+                      <S.TrackPlayDislikeSvg alt="dislike">
                         <use xlinkHref="img/icon/sprite.svg#icon-dislike"></use>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bar__volume-block volume">
-                <div className="volume__content">
-                  <div className="volume__image">
-                    <svg className="volume__svg" alt="volume">
+                      </S.TrackPlayDislikeSvg>
+                    </S.TrackPlayDislike>
+                  </S.TrackPlayLikeDis>
+                </S.PlayerTrackPlay>
+              </S.BarPlayer>
+              <S.BarVolumeBlock>
+                <S.VolumeContent>
+                  <S.VolumeImage>
+                    <S.VolumeSvg alt="volume">
                       <use xlinkHref="img/icon/sprite.svg#icon-volume"></use>
-                    </svg>
-                  </div>
-                  <div className="volume__progress _btn">
-                    <input
-                      className="volume__progress-line _btn"
+                    </S.VolumeSvg>
+                  </S.VolumeImage>
+                  <S.VolumeProgress className="_btn">
+                    <S.VolumeProgressLine
+                      className="_btn"
                       type="range"
                       name="range"
                     />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  </S.VolumeProgress>
+                </S.VolumeContent>
+              </S.BarVolumeBlock>
+            </S.BarPlayerBlock>
+          </S.BarContent>
+        </S.Bar>
         <footer className="footer"></footer>
-      </div>
-    </div>
+      </S.Container>
+    </S.Wrapper>
   );
 }

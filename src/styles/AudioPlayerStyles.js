@@ -128,7 +128,7 @@ export const PlayerTrackPlay = styled.div`
 `;
 
 export const TrackPlayContain = styled.div`
-  width: auto;
+  width: 150px;
   display: grid;
   -ms-grid-columns: auto 1fr;
   grid-template-columns: auto 1fr;
@@ -205,7 +205,7 @@ export const TrackPlayLikeDis = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-left: 26%;
+  margin-left: 50px;
 `;
 
 export const TrackPlayLike = styled.div`
@@ -228,7 +228,7 @@ export const TrackPlayDislikeSvg = styled.svg`
   stroke: #696969;
 `;
 
-export const  VolumeContent  = styled.div`
+export const VolumeContent = styled.div`
   display: -webkit-box;
   display: flexbox;
   display: flex;
@@ -241,12 +241,12 @@ export const  VolumeContent  = styled.div`
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
-`
+`;
 export const VolumeImage = styled.div`
   width: 13px;
   height: 18px;
   margin-right: 17px;
-`
+`;
 export const VolumeSvg = styled.svg`
   width: 13px;
   height: 13px;

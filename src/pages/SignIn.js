@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from '../styles/SignPages';
+import * as S from '../styles/SignPagesStyles';
 
 export default function SignIn() {
   return (
@@ -7,11 +7,7 @@ export default function SignIn() {
       <S.EnterContainer>
         <S.LoginBlock>
           <S.LoginForm>
-            <S.LoginInputMail
-              type="text"
-              name="mail"
-              placeholder="Почта"
-            />
+            <S.LoginInputMail type="text" name="mail" placeholder="Почта" />
             <S.LoginInput
               type="password"
               name="password"

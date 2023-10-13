@@ -1,6 +1,5 @@
 import React from 'react';
-import * as S from '../styles/AudioPlayer';
-
+import * as S from '../styles/AudioPlayerStyles';
 
 export default function AudioPlayer() {
   return (

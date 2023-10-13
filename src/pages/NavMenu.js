@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as S from '../styles/NavMenu';
+import * as S from '../styles/NavMenuStyles';
 
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false);

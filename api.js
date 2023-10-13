@@ -1,8 +1,7 @@
-import sanitizeHtml from './sanitizeHTML.js'
+import sanitizeHtml from './sanitizeHTML.js';
 // const personalKey = '';
 const baseHost = '	https://skypro-music-api.skyeng.tech/user/';
 //const postsHost = ``;
-
 
 // Регистрация
 export function registerUser({ login, password, name, imageUrl }) {

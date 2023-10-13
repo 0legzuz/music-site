@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import NavMenu from './pages/NavMenu.js';
-import TrackList from './pages/TrackList.js';
-import SideBar from './pages/SideBar.js';
-import AudioPlayer from './pages/AudioPlayer.js';
-import Skeleton from './pages/Skeleton.js';
-import SignIn from './pages/SignIn.js';
+import NavMenu from './NavMenu.js';
+import TrackList from './TrackList.js';
+import SideBar from './SideBar.js';
+import AudioPlayer from './AudioPlayer.js';
+import Skeleton from './Skeleton.js';
+import SignIn from './SignIn.js';
 // import SignUp from './pages/SignUp.js';
-import '../src/styles/App.css';
-import * as G from './styles/global.js';
+import * as G from '../styles/global.js';
+import * as S from '../styles/AppStyles.js';
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,16 +28,16 @@ function App() {
         isLoading ? (
           <Skeleton />
         ) : (
-          <div className="wrapper">
-            <div className="container">
-              <main className="main">
+          <S.Wrapper>
+            <S.Container>
+              <S.Main>
                 <NavMenu />
                 <TrackList />
                 <SideBar />
                 <AudioPlayer />
-              </main>
-            </div>
-          </div>
+              </S.Main>
+            </S.Container>
+          </S.Wrapper>
         )
       ) : (
         <SignIn setLogged={setLogged} />

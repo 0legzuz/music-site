@@ -3,7 +3,7 @@ const UserIcon = '/img/logo.svg';
 const Playlist01 = '/img/playlist01.png';
 const Playlist02 = '/img/playlist02.png';
 const Playlist03 = '/img/playlist03.png';
-import * as S from '../styles/SideBar';
+import * as S from '../styles/SideBarStyles';
 
 export default function Sidebar() {
   return (
