@@ -262,16 +262,16 @@ export const PlaylistTitleCol = styled.div`
   text-transform: uppercase;
 `;
 export const PlaylistTitleColTrack = styled(PlaylistTitleCol)`
-  max-width: 400px;
+
 `;
 export const PlaylistTitleColAuthor = styled(PlaylistTitleCol)`
-  max-width: 300px;
+
 `;
 export const PlaylistTitleColAlbum = styled(PlaylistTitleCol)`
-  max-width: 180px;
+
 `;
 export const PlaylistTitleColTimeLike = styled(PlaylistTitleCol)`
-  max-width: 65px;
+
   text-align: end;
   margin-right: 25px;
   margin-left: 40px;
@@ -318,7 +318,7 @@ export const TrackTitle = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 400px;
+
 `;
 export const TrackTitleImage = styled.div`
   width: 40px;
@@ -377,7 +377,7 @@ export const TrackAuthorLink = styled.a`
 `;
 
 export const TrackAlbum = styled.div`
-  max-width: 180px;
+  
 `;
 
 export const TrackAlbumLink = styled.a`
