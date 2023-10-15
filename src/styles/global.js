@@ -1,14 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-    * {
-    box-sizing: border-box;
+  * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   *::before,
   *::after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   } 
 

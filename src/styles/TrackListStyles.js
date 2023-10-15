@@ -2,14 +2,24 @@ import styled from 'styled-components';
 
 export const MainCenterblock = styled.div`
   width: auto;
+  -webkit-box-flex: 3;
+  -ms-flex-positive: 3;
+  flex-grow: 3;
   padding: 20px 20px 20px 20px;
 `;
 export const CenterblockSearch = styled.div`
   width: 100%;
   border-bottom: 1px solid #4e4e4e;
   margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 `;
 
@@ -22,14 +32,26 @@ export const CenterblockH2 = styled.h2`
   margin-bottom: 25px;
 `;
 export const CenterblockFilter = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 25px;
 `;
 
 export const CenterblockContent = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 `;
 
@@ -41,6 +63,8 @@ export const SearchSvg = styled.svg`
   fill: transparent;
 `;
 export const SearchText = styled.input`
+  -webkit-box-flex: 100;
+  -ms-flex-positive: 100;
   flex-grow: 100;
   background-color: transparent;
   border: none;
@@ -185,10 +209,11 @@ export const FilterDropdown = styled.div`
 
 export const ContentTitle = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -200,9 +225,12 @@ export const ContentTitle = styled.div`
 `;
 
 export const ContentPlaylist = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 800px;
   overflow-y: scroll;
@@ -258,17 +286,27 @@ export const PlaylistItem = styled.div`
   padding-right: 12px;
 `;
 export const PlaylistTrack = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 `;
 export const TrackTitle = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -280,8 +318,14 @@ export const TrackTitleImage = styled.div`
   height: 40px;
   padding: 12px;
   background-color: #313131;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-right: 17px;
 `;
@@ -309,7 +353,7 @@ export const TrackTitleSpan = styled.span`
 export const TrackAuthor = styled.div`
   width: 300px;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
   -ms-flex-pack: start;

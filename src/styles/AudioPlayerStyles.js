@@ -10,10 +10,11 @@ export const Bar = styled.div`
 
 export const BarContent = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 `;
 export const BarPlayerProgress = styled.div`
@@ -24,10 +25,11 @@ export const BarPlayerProgress = styled.div`
 export const BarPlayerBlock = styled.div`
   height: 60px;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -35,10 +37,11 @@ export const BarPlayerBlock = styled.div`
 `;
 export const BarPlayer = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -51,7 +54,7 @@ export const BarPlayer = styled.div`
 export const BarVolumeBlock = styled.div`
   width: auto;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -60,10 +63,11 @@ export const BarVolumeBlock = styled.div`
 `;
 export const PlayerControls = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   padding: 0 27px 0 31px;
 `;
@@ -71,7 +75,7 @@ export const PlayerControls = styled.div`
 export const PlayerBtnPrev = styled.div`
   padding: 5px;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -87,7 +91,8 @@ export const PlayerBtnNext = styled(PlayerBtnPrev)`
 export const PlayerBtnRepeat = styled(PlayerBtnPrev)`
   margin-right: 24px;
 `;
-export const PlayerBtnShuffle = styled(PlayerBtnPrev)``;
+export const PlayerBtnShuffle = styled(PlayerBtnPrev)`
+`;
 
 export const PlayerBtnPrevSvg = styled.svg`
   width: 15px;
@@ -120,15 +125,17 @@ export const PlayerBtnShuffleSvg = styled.svg`
 `;
 export const PlayerTrackPlay = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 `;
 
 export const TrackPlayContain = styled.div`
   width: 150px;
+  display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto 1fr;
   grid-template-columns: auto 1fr;
@@ -142,7 +149,7 @@ export const TrackPlayImage = styled.div`
   height: 40px;
   background-color: #313131;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -151,9 +158,9 @@ export const TrackPlayImage = styled.div`
   -ms-flex-pack: center;
   justify-content: center;
   margin-right: 12px;
-  grid-row: 1;
+  -ms-grid-row: 1;
   -ms-grid-row-span: 2;
-  grid-column: 1;
+  -ms-grid-column: 1;
   grid-area: image;
 `;
 
@@ -197,10 +204,11 @@ export const TrackPlayAlbumLink = styled.a`
 
 export const TrackPlayLikeDis = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -230,10 +238,11 @@ export const TrackPlayDislikeSvg = styled.svg`
 
 export const VolumeContent = styled.div`
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-align: center;
   -ms-flex-align: center;

@@ -28,8 +28,15 @@ export const LoginForm = styled.form`
   height: 439px;
   background-color: #fff;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 43px 47px 47px 40px;
 `;
@@ -65,8 +72,14 @@ export const LoginButton = styled.button`
   margin-top: 60px;
   margin-bottom: 20px;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   &:hover {
@@ -85,8 +98,14 @@ export const LoginButton = styled.button`
     line-height: 24px;
     letter-spacing: -0.05px;
     color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 `;
@@ -103,8 +122,14 @@ export const SignupButton = styled.button`
   line-height: 24px;
   letter-spacing: -0.05px;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   &:hover {
@@ -124,8 +149,14 @@ export const SignupButton = styled.button`
     line-height: 24px;
     letter-spacing: -0.05px;
     color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 `;

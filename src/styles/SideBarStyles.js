@@ -6,16 +6,17 @@ export const MainSidebar = styled.div`
 `;
 
 export const SidebarPersonal = styled.div`
-  align-items: center;
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: end;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 12px 0 15px;
@@ -36,13 +37,14 @@ export const SidebarIcon = styled.div`
   width: 43px;
 `;
 export const SidebarBlock = styled.div`
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: start;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
   -ms-flex-pack: start;
   height: 100%;
   justify-content: flex-start;
@@ -50,15 +52,16 @@ export const SidebarBlock = styled.div`
 `;
 
 export const SidebarList = styled.div`
-  align-items: center;
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
   display: -webkit-box;
-  display: flexbox;
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 `;
 
 export const SidebarItem = styled.div`
