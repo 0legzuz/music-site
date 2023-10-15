@@ -261,22 +261,14 @@ export const PlaylistTitleCol = styled.div`
   color: #696969;
   text-transform: uppercase;
 `;
-export const PlaylistTitleColTrack = styled(PlaylistTitleCol)`
-
-`;
-export const PlaylistTitleColAuthor = styled(PlaylistTitleCol)`
-
-`;
-export const PlaylistTitleColAlbum = styled(PlaylistTitleCol)`
-
-`;
+export const PlaylistTitleColTrack = styled(PlaylistTitleCol)``;
+export const PlaylistTitleColAuthor = styled(PlaylistTitleCol)``;
+export const PlaylistTitleColAlbum = styled(PlaylistTitleCol)``;
 export const PlaylistTitleColTimeLike = styled(PlaylistTitleCol)`
-
   text-align: end;
   margin-right: 25px;
   margin-left: 40px;
   display: flex;
-  
 `;
 
 export const PlaylistTitleSvg = styled.svg`
@@ -318,7 +310,6 @@ export const TrackTitle = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-
 `;
 export const TrackTitleImage = styled.div`
   width: 40px;
@@ -376,9 +367,7 @@ export const TrackAuthorLink = styled.a`
   text-align: left;
 `;
 
-export const TrackAlbum = styled.div`
-  
-`;
+export const TrackAlbum = styled.div``;
 
 export const TrackAlbumLink = styled.a`
   font-style: normal;
