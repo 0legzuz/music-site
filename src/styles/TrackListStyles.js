@@ -222,6 +222,8 @@ export const ContentTitle = styled.div`
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0fr;
 `;
 
 export const ContentPlaylist = styled.div`
@@ -269,8 +271,12 @@ export const PlaylistTitleColAlbum = styled(PlaylistTitleCol)`
   max-width: 180px;
 `;
 export const PlaylistTitleColTimeLike = styled(PlaylistTitleCol)`
-  width: 60px;
+  max-width: 65px;
   text-align: end;
+  margin-right: 25px;
+  margin-left: 40px;
+  display: flex;
+  
 `;
 
 export const PlaylistTitleSvg = styled.svg`
@@ -283,7 +289,6 @@ export const PlaylistItem = styled.div`
   width: 100%;
   display: block;
   margin-bottom: 12px;
-  padding-right: 12px;
 `;
 export const PlaylistTrack = styled.div`
   display: -webkit-box;
@@ -299,6 +304,8 @@ export const PlaylistTrack = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0fr;
 `;
 export const TrackTitle = styled.div`
   display: -webkit-box;
@@ -311,7 +318,7 @@ export const TrackTitle = styled.div`
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 400px;
+  max-width: 400px;
 `;
 export const TrackTitleImage = styled.div`
   width: 40px;
@@ -351,7 +358,7 @@ export const TrackTitleSpan = styled.span`
 `;
 
 export const TrackAuthor = styled.div`
-  width: 300px;
+  max-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +377,7 @@ export const TrackAuthorLink = styled.a`
 `;
 
 export const TrackAlbum = styled.div`
-  width: 180px;
+  max-width: 180px;
 `;
 
 export const TrackAlbumLink = styled.a`

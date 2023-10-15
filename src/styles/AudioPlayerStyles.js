@@ -264,18 +264,63 @@ export const VolumeSvg = styled.svg`
 
 export const VolumeProgress = styled.div`
   width: 109px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 `;
 
-export const VolumeProgressLine = styled.input`
-  width: 80px;
+
+
+export const VolumeProgressLine = styled.input.attrs({ type: 'range' })`
+  width: 100px;
   -webkit-appearance: none;
-  background-color: #696969;
-  border-radius: 5px;
+  appearance: none;
+  height: 2px;
+  border-radius: 1px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #580ea2;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #1c1c1c;
+  }
+
+  &::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #1c1c1c;
+  }
+
+  &::-ms-thumb {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #1c1c1c;
+  }
+
+  &::-webkit-slider-runnable-track {
+    background-color: transparent;
+  }
+
+  &::-moz-range-track {
+    background-color: transparent;
   }
 `;

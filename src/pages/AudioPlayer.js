@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from '../styles/AudioPlayerStyles';
 
+function VolumeProgress({ setValue, value }) {
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <S.VolumeProgressLine
+      name="range"
+      value={value}
+      onChange={handleChange}
+      style={{
+        background: `linear-gradient(
+          to right,
+          #fff 0%,
+          #fff ${value}%,
+          #696969 ${value}%,
+          #696969 100%
+        )`
+      }}
+    />
+  );
+}
 export default function AudioPlayer() {
+  const [value, setValue] = useState(50);
   return (
     <S.Bar>
       <S.BarContent>
@@ -77,11 +100,7 @@ export default function AudioPlayer() {
                 </S.VolumeSvg>
               </S.VolumeImage>
               <S.VolumeProgress className="_btn">
-                <S.VolumeProgressLine
-                  className="_btn"
-                  type="range"
-                  name="range"
-                />
+                <VolumeProgress value={value} setValue={setValue} />
               </S.VolumeProgress>
             </S.VolumeContent>
           </S.BarVolumeBlock>
