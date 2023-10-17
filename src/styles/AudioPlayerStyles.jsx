@@ -91,8 +91,7 @@ export const PlayerBtnNext = styled(PlayerBtnPrev)`
 export const PlayerBtnRepeat = styled(PlayerBtnPrev)`
   margin-right: 24px;
 `;
-export const PlayerBtnShuffle = styled(PlayerBtnPrev)`
-`;
+export const PlayerBtnShuffle = styled(PlayerBtnPrev)``;
 
 export const PlayerBtnPrevSvg = styled.svg`
   width: 15px;
@@ -278,8 +277,6 @@ export const VolumeProgress = styled.div`
   -ms-flex-pack: end;
   justify-content: end;
 `;
-
-
 
 export const VolumeProgressLine = styled.input.attrs({ type: 'range' })`
   width: 100px;

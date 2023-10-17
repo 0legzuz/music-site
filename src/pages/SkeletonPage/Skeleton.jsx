@@ -1,11 +1,11 @@
 import React from 'react';
 const UserIcon = '/img/logo.svg';
-import * as TrackList from '../styles/TrackListStyles';
-import * as NavMenu from '../styles/NavMenuStyles';
-import * as SideBar from '../styles/SideBarStyles';
-import * as SkeletonModule from '../styles/SkeletonStyles';
-import * as AudioPlayer from '../styles/AudioPlayerStyles';
-import * as AppStyles from '../styles/AppStyles.js';
+import * as TrackList from '../../styles/TrackListStyles';
+import * as NavMenu from '../../styles/NavMenuStyles';
+import * as SideBar from '../../styles/SideBarStyles';
+import * as SkeletonModule from '../../styles/SkeletonStyles';
+import * as AudioPlayer from '../../styles/AudioPlayerStyles';
+import * as AppStyles from '../../styles/AppStyles.jsx';
 
 const S = {
   ...TrackList,

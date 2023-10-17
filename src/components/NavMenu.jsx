@@ -15,7 +15,7 @@ export default function NavMenu() {
         <S.BurgerLine></S.BurgerLine>
         <S.BurgerLine></S.BurgerLine>
       </S.NavBurger>
-      <S.NavMenu isOpen={isOpen}>
+      <S.NavMenu $isOpen={isOpen}>
         <S.MenuList>
           <S.MenuItem>
             <S.MenuLink href="#" className="menu__link">
