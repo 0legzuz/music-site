@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 // Страница входа
 export const LoginWrapper = styled.div`
@@ -109,6 +110,11 @@ export const LoginButton = styled.button`
     justify-content: center;
   }
 `;
+export const SignInLink = styled(NavLink)`
+  cursor: pointer;
+  font-family: StratosSkyeng, sans-serif;
+  text-decoration: none;
+`;
 
 export const SignupButton = styled.button`
   width: 278px;
@@ -159,6 +165,12 @@ export const SignupButton = styled.button`
     -ms-flex-pack: center;
     justify-content: center;
   }
+`;
+
+export const SignUpLink = styled(NavLink)`
+  cursor: pointer;
+  font-family: StratosSkyeng, sans-serif;
+  text-decoration: none;
 `;
 
 export const SignupButtonRegister = styled(SignupButton)`

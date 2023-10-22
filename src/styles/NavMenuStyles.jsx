@@ -1,12 +1,18 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const MainNav = styled.nav`
   width: auto;
   background-color: #181818;
+  ${(props) =>
+    props.$isOpen &&
+    `
+    background-color: #1C1C1C;
+  `}
   padding: 20px 20px 20px 20px;
 `;
 
-export const NavLogo = styled.div`
+export const NavLogo = styled(NavLink)`
   height: 43px;
   padding: 13px 0;
   background-color: transparent;
@@ -41,7 +47,7 @@ export const NavMenu = styled.div`
     opacity 0.5s,
     visibility 0.5s;
   ${(props) =>
-    props.isOpen &&
+    props.$isOpen &&
     `
     opacity: 1;
     visibility: visible;
@@ -63,7 +69,10 @@ export const MenuItem = styled.li`
   margin-bottom: 16px;
 `;
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(NavLink)`
+  cursor: pointer;
+  font-family: StratosSkyeng, sans-serif;
+  text-decoration: none;
   color: #fff;
   font-weight: 400;
   font-size: 14px;

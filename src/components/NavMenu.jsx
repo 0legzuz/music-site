@@ -6,9 +6,9 @@ export default function NavMenu() {
 
   const toggleMenu = () => setIsOpen((oldState) => !oldState);
   return (
-    <S.MainNav>
-      <S.NavLogo>
-        <S.LogoImage src="img/logo.svg" alt="logo" />
+    <S.MainNav $isOpen={isOpen}>
+      <S.NavLogo to="/">
+        <S.LogoImage src="/img/icon/logo.svg" alt="logo" />
       </S.NavLogo>
       <S.NavBurger onClick={toggleMenu}>
         <S.BurgerLine></S.BurgerLine>
@@ -18,17 +18,17 @@ export default function NavMenu() {
       <S.NavMenu $isOpen={isOpen}>
         <S.MenuList>
           <S.MenuItem>
-            <S.MenuLink href="#" className="menu__link">
+            <S.MenuLink to="/" className="menu__link">
               Главное
             </S.MenuLink>
           </S.MenuItem>
           <S.MenuItem>
-            <S.MenuLink href="#" className="menu__link">
+            <S.MenuLink to="/favorites" className="menu__link">
               Мой плейлист
             </S.MenuLink>
           </S.MenuItem>
           <S.MenuItem>
-            <S.MenuLink href="#">Войти</S.MenuLink>
+            <S.MenuLink to="/signin">Войти</S.MenuLink>
           </S.MenuItem>
         </S.MenuList>
       </S.NavMenu>

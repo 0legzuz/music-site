@@ -92,7 +92,7 @@ export const FilterTitle = styled.div`
   margin-right: 15px;
 `;
 
-export const FilterButton = styled.div`
+export const FilterButton = styled.button`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -100,6 +100,8 @@ export const FilterButton = styled.div`
   border: 1px solid #fff;
   border-radius: 60px;
   padding: 4px 15px;
+  background: none;
+  color: inherit;
   &:not(:last-child) {
     margin-right: 10px;
   }

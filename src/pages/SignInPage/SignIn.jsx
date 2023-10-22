@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from '../styles/SignPagesStyles';
+import * as S from '../../styles/SignPagesStyles';
 
 export default function SignIn() {
   return (
@@ -14,10 +14,10 @@ export default function SignIn() {
               placeholder="Пароль"
             />
             <S.LoginButton type="submit">
-              <a href="#">Войти</a>
+              <S.SignInLink to="/">Войти</S.SignInLink>
             </S.LoginButton>
             <S.SignupButton>
-              <a href="#">Зарегистрироваться</a>
+              <S.SignUpLink to="/signup">Зарегистрироваться</S.SignUpLink>
             </S.SignupButton>
           </S.LoginForm>
         </S.LoginBlock>

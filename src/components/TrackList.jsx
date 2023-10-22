@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
 import * as S from '../styles/TrackListStyles';
 
-export default function TrackList() {
+export default function TrackList({ onTrackClick }) {
   const [showAuthor, setShowAuthor] = useState(false);
   const [showYear, setShowYear] = useState(false);
   const [showGenre, setShowGenre] = useState(false);
 
-  const toggleAuthor = () => {
+  const toggleAuthor = (event) => {
+    event.preventDefault();
     setShowAuthor(!showAuthor);
     setShowYear(false);
     setShowGenre(false);
   };
 
-  const toggleYear = () => {
+  const toggleYear = (event) => {
+    event.preventDefault();
     setShowYear(!showYear);
     setShowAuthor(false);
     setShowGenre(false);
   };
 
-  const toggleGenre = () => {
+  const toggleGenre = (event) => {
+    event.preventDefault();
     setShowGenre(!showGenre);
     setShowAuthor(false);
     setShowYear(false);
@@ -38,7 +41,8 @@ export default function TrackList() {
         <S.FilterTitle>Искать по:</S.FilterTitle>
 
         <S.FilterButton
-          className="button-author _btn-text"
+          type="button"
+          className="_btn-text"
           onClick={toggleAuthor}
         >
           исполнителю
@@ -55,7 +59,11 @@ export default function TrackList() {
           </S.AuthorFilter>
         )}
 
-        <S.FilterButton className="button-year _btn-text" onClick={toggleYear}>
+        <S.FilterButton
+          type="button"
+          className="_btn-text"
+          onClick={toggleYear}
+        >
           году выпуска
         </S.FilterButton>
         {showYear && (
@@ -71,7 +79,8 @@ export default function TrackList() {
         )}
 
         <S.FilterButton
-          className="filter__button button-genre _btn-text"
+          type="button"
+          className="_btn-text"
           onClick={toggleGenre}
         >
           жанру
@@ -109,7 +118,7 @@ export default function TrackList() {
                   </S.TrackTitleSvg>
                 </S.TrackTitleImage>
                 <div className="track__title-text">
-                  <S.TrackTitleLink href="http://">
+                  <S.TrackTitleLink onClick={onTrackClick} href="#">
                     Название трека <S.TrackTitleSpan></S.TrackTitleSpan>
                   </S.TrackTitleLink>
                 </div>

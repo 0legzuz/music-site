@@ -1,5 +1,5 @@
 import React from 'react';
-const UserIcon = '/img/logo.svg';
+const UserIcon = '/img/icon/exit.svg';
 const Playlist01 = '/img/playlist01.png';
 const Playlist02 = '/img/playlist02.png';
 const Playlist03 = '/img/playlist03.png';
@@ -10,14 +10,16 @@ export default function Sidebar() {
     <S.MainSidebar>
       <S.SidebarPersonal>
         <S.SidebarPersonalName>0legzuz</S.SidebarPersonalName>
-        <S.SidebarIcon>
-          <img src={UserIcon} alt="User Icon" />
-        </S.SidebarIcon>
+        <S.SignInLink to="/signin">
+          <S.SidebarIcon>
+            <img src={UserIcon} alt="User Icon" />
+          </S.SidebarIcon>
+        </S.SignInLink>
       </S.SidebarPersonal>
       <S.SidebarBlock>
         <S.SidebarList>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/category/1">
               <S.SidebarImg
                 className="sidebar__img"
                 src={Playlist01}
@@ -26,7 +28,7 @@ export default function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/favorites/2">
               <S.SidebarImg
                 className="sidebar__img"
                 src={Playlist02}
@@ -35,7 +37,7 @@ export default function Sidebar() {
             </S.SidebarLink>
           </S.SidebarItem>
           <S.SidebarItem>
-            <S.SidebarLink href="#">
+            <S.SidebarLink to="/favorites/3">
               <S.SidebarImg src={Playlist03} alt="Playlist 03" />
             </S.SidebarLink>
           </S.SidebarItem>

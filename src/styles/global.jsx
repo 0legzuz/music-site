@@ -36,7 +36,6 @@ export const GlobalStyle = createGlobalStyle`
   a,
   a:visited {
     cursor: pointer;
-    font-family: StratosSkyeng, sans-serif;
     text-decoration: none;
   }
   
@@ -52,7 +51,6 @@ export const GlobalStyle = createGlobalStyle`
   border-color: #d9b6ff;
   color: #d9b6ff;
   cursor: pointer;
-  font-family: StratosSkyeng, sans-serif;
 }
 
 ._btn-icon:hover svg {

@@ -1,18 +1,18 @@
 import React from 'react';
-const UserIcon = '/img/logo.svg';
-import * as TrackList from '../../styles/TrackListStyles';
-import * as NavMenu from '../../styles/NavMenuStyles';
-import * as SideBar from '../../styles/SideBarStyles';
-import * as SkeletonModule from '../../styles/SkeletonStyles';
-import * as AudioPlayer from '../../styles/AudioPlayerStyles';
+import * as TrackListStyles from '../../styles/TrackListStyles';
+import * as NavMenuStyles from '../../styles/NavMenuStyles';
+import * as SideBarStyles from '../../styles/SideBarStyles';
+import * as SkeletonModuleStyles from '../../styles/SkeletonStyles';
+import * as AudioPlayerStyles from '../../styles/AudioPlayerStyles';
 import * as AppStyles from '../../styles/AppStyles.jsx';
+const UserIcon = '/img/icon/exit.svg';
 
 const S = {
-  ...TrackList,
-  ...NavMenu,
-  ...SideBar,
-  ...SkeletonModule,
-  ...AudioPlayer,
+  ...TrackListStyles,
+  ...NavMenuStyles,
+  ...SideBarStyles,
+  ...SkeletonModuleStyles,
+  ...AudioPlayerStyles,
   ...AppStyles
 };
 
@@ -23,7 +23,7 @@ export default function Skeleton() {
         <S.Main>
           <S.MainNav>
             <S.NavLogo>
-              <S.LogoImage src="img/logo.svg" alt="logo" />
+              <S.LogoImage src="img/icon/exit.svg" alt="logo" />
             </S.NavLogo>
             <S.NavBurger>
               <S.BurgerLine></S.BurgerLine>
@@ -93,16 +93,16 @@ export default function Skeleton() {
                         </S.TrackTitleSvg>
                       </S.TrackTitleImage>
                       <div className="track__title-text">
-                        <S.TrackTitleLinkSkeleton href="http://">
+                        <S.TrackTitleLinkSkeleton href="#">
                           <S.TrackTitleSpan></S.TrackTitleSpan>
                         </S.TrackTitleLinkSkeleton>
                       </div>
                     </S.TrackTitle>
                     <S.TrackAuthor>
-                      <S.TrackAuthorLinkSkeleton href="http://"></S.TrackAuthorLinkSkeleton>
+                      <S.TrackAuthorLinkSkeleton href="#"></S.TrackAuthorLinkSkeleton>
                     </S.TrackAuthor>
                     <S.TrackAlbum>
-                      <S.TrackAlbumLinkSkeleton href="http://"></S.TrackAlbumLinkSkeleton>
+                      <S.TrackAlbumLinkSkeleton href="#"></S.TrackAlbumLinkSkeleton>
                     </S.TrackAlbum>
                     <S.TrackTime>
                       <S.TrackTimeSvg alt="time">

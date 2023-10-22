@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const MainSidebar = styled.div`
   max-width: 418px;
-  padding: 20px 150px 20px 20px;
+  padding: 20px 60px 20px 20px;
 `;
 
 export const SidebarPersonal = styled.div`
@@ -29,6 +30,10 @@ export const SidebarPersonalName = styled.p`
   font-weight: 400;
   line-height: 24px;
   margin-right: 16px;
+`;
+
+export const SignInLink = styled(NavLink)`
+  cursor: pointer;
 `;
 
 export const SidebarIcon = styled.div`
@@ -73,7 +78,7 @@ export const SidebarItem = styled.div`
   }
 `;
 
-export const SidebarLink = styled.a`
+export const SidebarLink = styled(NavLink)`
   height: 100%;
   width: 100%;
 `;
